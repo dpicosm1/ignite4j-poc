@@ -1,14 +1,28 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>es.ozona</groupId>
-    <artifactId>ignite4j-poc</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>ignite4j-poc-mq</artifactId>
-  <packaging>pom</packaging>
-  <name>ignite4j-poc-mq</name>
-  <modules>
-  	<module>ignite4j-poc-mq-simple</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>es.ozona</groupId>
+		<artifactId>ignite4j-poc</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>ignite4j-poc-mq</artifactId>
+	<packaging>pom</packaging>
+	<name>ignite4j-poc-mq</name>
+	<modules>
+		<module>ignite4j-poc-mq-simple</module>
+	</modules>
+	<properties>
+		<rabbitmq.client.version>5.8.0</rabbitmq.client.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.rabbitmq</groupId>
+				<artifactId>amqp-client</artifactId>
+				<version>${rabbitmq.client.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
