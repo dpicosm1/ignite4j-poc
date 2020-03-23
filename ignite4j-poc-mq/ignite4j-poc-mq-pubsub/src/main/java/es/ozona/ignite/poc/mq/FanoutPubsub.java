@@ -1,4 +1,4 @@
-package es.ozona.poc.mq;
+package es.ozona.ignite.poc.mq;
 
 public class FanoutPubsub {
 	private static final String EXCHANGE_NAME = "FanoutExchange";
