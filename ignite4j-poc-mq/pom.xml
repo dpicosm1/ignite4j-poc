@@ -13,6 +13,8 @@
 	<modules>
 		<module>ignite4j-poc-mq-simple</module>
 		<module>ignite4j-poc-mq-taskqueue</module>
+		<module>ignite-poc-mq-pubsub</module>
+		<module>ignite4j-poc-mq-pubsub</module>
 	</modules>
 	<properties>
 		<rabbitmq.client.version>5.8.0</rabbitmq.client.version>
